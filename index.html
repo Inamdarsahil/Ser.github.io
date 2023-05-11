@@ -80,7 +80,7 @@
 
         var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 
-        firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+        firebase.auth().signInWithPhoneNumber(phoneNumber)
 
           .then(function (confirmationResult) {
 
