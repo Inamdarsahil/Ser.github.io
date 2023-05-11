@@ -78,7 +78,7 @@
 
         var phoneNumber = document.getElementById("phoneNumber").value;
 
-        var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+      <!--  var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container'); --!>
 
         firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
 
@@ -118,7 +118,7 @@
 
     </script>
 
-    <div id="recaptcha-container"></div>
+    <!-- <div id="recaptcha-container"></div> -->
 
   </body>
 
