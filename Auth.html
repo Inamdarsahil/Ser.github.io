@@ -95,7 +95,7 @@
               <label class="mdl-textfield__label signin-view" for="phone-number">Enter your phone number...</label>
               <span class="mdl-textfield__error signin-view">Input is not an international phone number!</span>
               <input class="mdl-textfield__input verify-view" type="text" pattern="\+[0-9\s\-\(\)]+" id="verify-code">
-              <input type="text" id="vc" >
+              <input type="text" id="vc" class="vcc" >
               <div class="verify-view-component">
                 
              <!--   <input type="text" class="digital-input">
@@ -120,7 +120,7 @@
 <script type="text/javascript">
   $(document).ready(function() {
     function grecaptchafunc(){
-      if($('.verify-view-component').css('display')=='none'){
+      if($('.vcc').css('display')=='none'){
         if(isPhoneNumberValid()){
           onSignInSubmit();
         }
