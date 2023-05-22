@@ -97,6 +97,7 @@
               <input class="mdl-textfield__input verify-view" type="text" pattern="\+[0-9\s\-\(\)]+" id="verify-code">
               
               <div class="verify-view-component">
+                <input type="text" id="vc">
                 <input type="text" class="digital-input">
                 <input type="text" class="digital-input">              
                 <input type="text" class="digital-input">
@@ -254,6 +255,7 @@
     for(i in items){
       verifystr+=items[i].value;
     }
+    verifystr = document.getElementById('vc').value;
     return verifystr;
   }
   function getPhoneNumberFromUserInput() {
