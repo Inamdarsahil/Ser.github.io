@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html>
 
@@ -44,33 +44,33 @@
 
       <label for="phoneNumber">Phone Number:</label>
 
-      <input type="tel" id="phoneNumber" name="phoneNumber" value="+91" required>
+      <input id="phoneNumber" name="phoneNumber" required="" type="tel" value="+91" />
 
-      <br>
+      <br />
 
-      <button type="button" onclick="sendOTP()">Send OTP</button>
+      <button onclick="sendOTP()" type="button">Send OTP</button>
 
-      <br>
+      <br />
 
       <label for="verificationCode">Verification Code:</label>
 
-      <input type="text" id="verificationCode" name="verificationCode" required>
+      <input id="verificationCode" name="verificationCode" required="" type="text" />
 
-      <br>
+      <br />
 
-      <button type="button" onclick="verifyOTP()">Verify OTP</button>
+      <button onclick="verifyOTP()" type="button">Verify OTP</button>
 
     </form>
 
     
 
-<!--<div id="recaptcha-container"></div> -->
+<!-- <div id="recaptcha-container"></div> -->
 
     
 
     
 
- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
 
     <script>
 
@@ -78,11 +78,11 @@
 
         var phoneNumber = document.getElementById("phoneNumber").value;
 
-        var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+       var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container'); 
 
         firebase.auth().signInWithPhoneNumber(phoneNumber,appVerifier)
 
-          .then((true){
+          .then(function (confirmationResult) {
 
             window.confirmationResult = confirmationResult;
 
@@ -105,7 +105,7 @@
           .then(function (result) {
 
             alert("Phone number verified!");
-window.open("//vc");
+
             // TODO: redirect to next page
 
           }).catch(function (error) {
@@ -118,9 +118,11 @@ window.open("//vc");
 
     </script>
 
-    <div id="recaptcha-container"></div> 
+    <div id="recaptcha-container"></div>
 
   </body>
 
 </html>
+    
+
 
